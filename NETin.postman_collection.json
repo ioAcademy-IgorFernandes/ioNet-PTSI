@@ -1,0 +1,5158 @@
+{
+	"info": {
+		"_postman_id": "353946ec-f26e-47ef-b0a4-03963812532f",
+		"name": "NETin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ioaccount",
+			"item": [
+				{
+					"name": "/ioaccount/auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\": \"diogoferreira@iotech.pt\",\r\n\t\"password\": \"WC&HYDK5GnbFIo$z\"\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/ioaccount/auth",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ioaccount",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ioaccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1ODg5ODExODMsImV4cCI6MTU4OTA0MTE4MywiaXNzIjoiSU9UZWNoIn0.xr4dZWURAoY4jPNEvkC0WU5TDD-gGpDP7hX8RPzPvNs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"Diogo Ferreira\",\r\n\t\"user_type\":\"Admin\",\r\n\t\"email\": \"diogoferreira@ioacademy.iotech.pt\",\r\n\t\"password\": \"WC&HYDK5GnbFIo$z\"\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/ioaccount",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ioaccount"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "SIBS",
+			"item": [
+				{
+					"name": "/sibs/available_accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/sibs/available_accounts",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sibs",
+								"available_accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sibs/accounts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"account_id\":\"71525dacac1763b812af4e83af61847\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/sibs/accounts",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sibs",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sibs/balances",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/sibs/balances",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sibs",
+								"balances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sibs/transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/sibs/transactions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sibs",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/netin/user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0YTQ0OWM1ZjgwZjI2NTE4YWRmZjQwNWIwM2MzZGVhZGQ4MjAzZDYxNDJlZDM1MTI4MmY1NjFlNjY4MzE2MmU5ODZkOTJjMTAzNjkxZGE4IiwidHlwZSI6IlN1cGVyQWRtaW4iLCJpYXQiOjE1NTE4MTU1ODgsImV4cCI6MTU1MTg3NTU4OCwiaXNzIjoiSU9UZWNoIn0.-i0lh_BfAJ3tKvO5m4vbkPY6s8n6Tp2DblzrGKQ5cXI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"1\",\n\t\"name\":\"Diogo\",\n\t\"group\":\"group name\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1ODg5ODI3NTAsImV4cCI6MTU4OTA0Mjc1MCwiaXNzIjoiSU9UZWNoIn0.XBR1oEsvlJ6Lg99KClnMy43LfSLI6pv3xxkLv1nCtiI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/netin/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/user/logged",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1ODMwOTkyMDEsImV4cCI6MTU4MzE1OTIwMSwiaXNzIjoiSU9UZWNoIn0.zpze1mD5LfZSyjAJe4F7vFzhvkqcRn3Ku8ZPJcvnMXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/netin/user/logged",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user",
+								"logged"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/user/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNDk2NzksImV4cCI6MTU1ODQwOTY3OSwiaXNzIjoiSU9UZWNoIn0.v5Lp9icoxedP0iJ0OqYWatwnnpcQdN7wBlF2pRMl5BM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/netin/user/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5c85b420cc50e434ecc4a12d",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/user/group/:group",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNDk2NzksImV4cCI6MTU1ODQwOTY3OSwiaXNzIjoiSU9UZWNoIn0.v5Lp9icoxedP0iJ0OqYWatwnnpcQdN7wBlF2pRMl5BM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/netin/user/group/:group",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user",
+								"group",
+								":group"
+							],
+							"variable": [
+								{
+									"key": "group",
+									"value": "Testers",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/user/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNDk2NzksImV4cCI6MTU1ODQwOTY3OSwiaXNzIjoiSU9UZWNoIn0.v5Lp9icoxedP0iJ0OqYWatwnnpcQdN7wBlF2pRMl5BM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"27aebc94ed4916a2cbf9dbd4cdcdc792692f156c9068bdc7d2da5c34438faa995d9252b8d0118a9c\",\n\t\"name\":\"Netin Admin\",\n\t\"group\":\"Admin\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/user/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5c8acacfc12d7b06c42596cb",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/user/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTIzMzk1NjAsImV4cCI6MTU1MjM5OTU2MCwiaXNzIjoiSU9UZWNoIn0.tYEmJll37svqkSanWYIFaAfrIFHgEtlSzLmZfFr8Uuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/netin/user/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "daaf9108-03f5-4f78-9446-64350b74b381",
+									"key": "id",
+									"value": "5c869aa245f0f5572a045262",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/user/terms/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NjMxOTUxODksImV4cCI6MTU2MzI1NTE4OSwiaXNzIjoiSU9UZWNoIn0.J4eiEh08ZVmlUXeV90m2j6gYzT4PuEYr5LIJ9skB-jo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"terms\":[\n\t\t{\n\t\t\t\"term_id\":\"5d2c7d0a697cd01d9d51f1a7\",\n\t\t\t\"agreed\":true\n\t\t},\n\t\t{\n\t\t\t\"term_id\":\"5d2c7d35697cd01d9d51f1a8\",\n\t\t\t\"agreed\":true\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/user/terms/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"user",
+								"terms",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "2774b542-1f37-4ddf-bc1f-ff01828c659f",
+									"key": "id",
+									"value": "5c8acacfc12d7b06c42596cb",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "/netin/application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"application\": \"ioGuest\",\r\n    \"version\": \"1.0\",\r\n    \"url\": \"https://iotech.pt/\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/application",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application/:applicationId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"application\": \"ioGuest\",\r\n    \"version\": \"3.0\",\r\n    \"url\": \"https://iotech.pt/\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/application/:applicationId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								":applicationId"
+							],
+							"variable": [
+								{
+									"id": "2c21c3c9-c575-4252-ae9b-c28c412b2f8a",
+									"key": "applicationId",
+									"value": "5cc9fd4e2e4c6e03f6b1ff9a",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application/:applicationId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/netin/application/:applicationId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								":applicationId"
+							],
+							"variable": [
+								{
+									"id": "1562404c-9142-41c9-8985-b449f59ab885",
+									"key": "applicationId",
+									"value": "5cc9fd4e2e4c6e03f6b1ff9a",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg1MTkzNTIsImV4cCI6MTU1ODU3OTM1MiwiaXNzIjoiSU9UZWNoIn0.W1Ieqe4fsKLf4YHhEjS3I-ClYHNDXFxp5JSrIEEqXMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/application/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application/:applicationId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/application/:applicationId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								":applicationId"
+							],
+							"variable": [
+								{
+									"id": "ee9dec23-27a1-4ecd-ad89-a89481bea9cd",
+									"key": "applicationId",
+									"value": "5cc2299cc57e721bc60618a4",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application/active",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/application/active",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application/user/:userId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NzIzNTA2NjksImV4cCI6MTU3MjQxMDY2OSwiaXNzIjoiSU9UZWNoIn0.COMImzi29soww6Ihu3J1b0bG5LzRbvMPTe3xgoG771o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTE5MjEwOTAsImV4cCI6MTU1MTk4MTA5MCwiaXNzIjoiSU9UZWNoIn0.-79puxtQHzDsXdhj2vTIsOOi_3N2HIoLcDTBZajuVKc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/netin/application/user/:userId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "5d2e410e7774d80017fa9db1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application/access/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NjMzMTUxNTEsImV4cCI6MTU2MzM3NTE1MSwiaXNzIjoiSU9UZWNoIn0.ezM909qZ7DftTWZQfSp_YbF2YWixwVxrpVw6kuIt_Nw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/application/access/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								"access",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5cca22af3b2b8a1d1c975b03",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/application/access",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cookie\":\"ib{Cs*hHR6zQLgs[vK[xc*%E.#A|,TPqPsWXwsF8egJj5iJEvQr7(glUi][l#qUi\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/application/access",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"application",
+								"access"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Permission",
+			"item": [
+				{
+					"name": "/netin/permission/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idApp\":\"5cca22af3b2b8a1d1c975b03\",\n\t\"idUser\":\"5c85b441cc50e434ecc4a12f\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/permission/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"permission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/permission/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idUser\":\"5c926e3457fc2506d0e29be1\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/permission/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"permission",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "a3859744-56ad-4abc-973d-8e9906717d50",
+									"key": "id",
+									"value": "5cc9fe44cfb16b0470ce9566",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/permission/:id/user/:userId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEyNTQsImV4cCI6MTU1NjgwMTI1NCwiaXNzIjoiSU9UZWNoIn0._w89krHdmUiPkNZJmcJ25e5i-oXolBOuTcR2J4nSfjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0YTQ0OWM1ZjgwZjI2NTE4YWRmZjQwNWIwM2MzZGVhZGQ4MjAzZDYxNDJlZDM1MTI4MmY1NjFlNjY4MzE2MmU5ODZkOTJjMTAzNjkxZGE4IiwidHlwZSI6IlN1cGVyQWRtaW4iLCJpYXQiOjE1NTE3MDE3MTcsImV4cCI6MTU1MTc2MTcxNywiaXNzIjoiSU9UZWNoIn0.0UjwhBboCsG0Uyf1RfGelEu-fkoNfu2sSHq_3Sj8YiU"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/netin/permission/:id/user/:idUser",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"permission",
+								":id",
+								"user",
+								":idUser"
+							],
+							"variable": [
+								{
+									"id": "7be24660-473e-4b71-bd78-e6bd29b2a63e",
+									"key": "id",
+									"value": "5cc9fe44cfb16b0470ce9566",
+									"type": "string"
+								},
+								{
+									"id": "470dc916-a7f3-4488-b2fe-55f317875cf8",
+									"key": "idUser",
+									"value": "5c926e3457fc2506d0e29be1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/permission/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEyNTQsImV4cCI6MTU1NjgwMTI1NCwiaXNzIjoiSU9UZWNoIn0._w89krHdmUiPkNZJmcJ25e5i-oXolBOuTcR2J4nSfjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/permission/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"permission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/permission/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/permission/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"permission",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "ec8c9722-5e5f-492d-9e99-208f4b483fbb",
+									"key": "id",
+									"value": "5cc9fe44cfb16b0470ce9566",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/permission/application/:appId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgxMTAxMjEsImV4cCI6MTU1ODE3MDEyMSwiaXNzIjoiSU9UZWNoIn0.mvccKFzN7t6F4k0xbyO2bNdhBru7O8p67ctj2fSMHSc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/netin/permission/application/:appId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"permission",
+								"application",
+								":appId"
+							],
+							"variable": [
+								{
+									"id": "8cfb60b8-8e71-4678-aaee-451f31681546",
+									"key": "appId",
+									"value": "5cca22af3b2b8a1d1c975b03",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Recomendation",
+			"item": [
+				{
+					"name": "/netin/recomendation/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTE5MjEwOTAsImV4cCI6MTU1MTk4MTA5MCwiaXNzIjoiSU9UZWNoIn0.-79puxtQHzDsXdhj2vTIsOOi_3N2HIoLcDTBZajuVKc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUser\": \"5c926e3457fc2506d0e29be1\",\r\n    \"idApp\": \"5cca22af3b2b8a1d1c975b03\",\r\n    \"feedbacks\": [\r\n    \t{\r\n    \t\t\"feedback\": \"good2\"\r\n    \t},\r\n    \t{\r\n    \t\t\"feedback\": \"bad2\"\r\n    \t}\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/recomendation/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/recomendation/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"feedbacks\": [\r\n    \t{\r\n    \t\t\"feedback\": \"Test\"\r\n    \t},\r\n    \t{\r\n    \t\t\"feedback\": \"lastTest\"\r\n    \t}\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/recomendation/:recomendationId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation",
+								":recomendationId"
+							],
+							"variable": [
+								{
+									"id": "c90f5514-f380-4dc9-ad09-63dd799d06c2",
+									"key": "recomendationId",
+									"value": "5cca22cb3b2b8a1d1c975b06",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/recomendation/:id/feedback/:feedbackId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNjYzMzUsImV4cCI6MTU1ODQyNjMzNSwiaXNzIjoiSU9UZWNoIn0.CPWjJ0bXymElz9203dzBaZkpbSq45CUzvMnV7ga6fTM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTE5MjEwOTAsImV4cCI6MTU1MTk4MTA5MCwiaXNzIjoiSU9UZWNoIn0.-79puxtQHzDsXdhj2vTIsOOi_3N2HIoLcDTBZajuVKc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/netin/recomendation/:recomendationId/feedback/:feedbackId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation",
+								":recomendationId",
+								"feedback",
+								":feedbackId"
+							],
+							"variable": [
+								{
+									"key": "recomendationId",
+									"value": "5cca22cb3b2b8a1d1c975b06",
+									"type": "string"
+								},
+								{
+									"key": "feedbackId",
+									"value": "5cca22f63b2b8a1d1c975b09",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/recomendation/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNjYzMzUsImV4cCI6MTU1ODQyNjMzNSwiaXNzIjoiSU9UZWNoIn0.CPWjJ0bXymElz9203dzBaZkpbSq45CUzvMnV7ga6fTM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTE5MjEwOTAsImV4cCI6MTU1MTk4MTA5MCwiaXNzIjoiSU9UZWNoIn0.-79puxtQHzDsXdhj2vTIsOOi_3N2HIoLcDTBZajuVKc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/netin/recomendation",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/recomendation/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/recomendation/:recomendationId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation",
+								":recomendationId"
+							],
+							"variable": [
+								{
+									"id": "184758c5-a848-4734-87b0-50f276b8722e",
+									"key": "recomendationId",
+									"value": "5cc9ff1fcfb16b0470ce9569",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/recomendation/user/:userId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/recomendation/user/:userId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"id": "16e1bb8e-93ca-4d81-8934-e614faacd266",
+									"key": "userId",
+									"value": "5c926e3457fc2506d0e29be1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/recomendation/application/:testId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/recomendation/application/:applicationId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation",
+								"application",
+								":applicationId"
+							],
+							"variable": [
+								{
+									"id": "b9e6e7bd-793e-44b0-902d-ba749a0ae336",
+									"key": "applicationId",
+									"value": "5cc2299cc57e721bc60618a4",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/recomendation/application/:testId/user/:userId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/recomendation/application/:applicationId/user/:userId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"recomendation",
+								"application",
+								":applicationId",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "applicationId",
+									"value": "5cca22af3b2b8a1d1c975b03",
+									"type": "string"
+								},
+								{
+									"key": "userId",
+									"value": "5c8acacfc12d7b06c42596cb",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Moloni",
+			"item": [
+				{
+					"name": "/Moloni/billing",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1ODcwNzQyNTIsImV4cCI6MTU4NzEzNDI1MiwiaXNzIjoiSU9UZWNoIn0.GugO0Jrw49bju-y8opxFlMhf-My_25HMW4OqjVXNyso",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/Moloni/billing",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Moloni",
+								"billing"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GoogleCalendar",
+			"item": [
+				{
+					"name": "/GoogleCalendar/calendar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNTA4NzcsImV4cCI6MTU1ODQxMDg3NywiaXNzIjoiSU9UZWNoIn0.Z-nr9NuB8p1BXbiHXHhY1BvxQjjd5nfdLHqBmEpZfe4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/GoogleCalendar/calendar",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleCalendar",
+								"calendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleCalendar/calendar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTMyNTE2NDksImV4cCI6MTU1MzMxMTY0OSwiaXNzIjoiSU9UZWNoIn0.6svMe1Kq8s0NUrZVjeWXdQU4CBGmYdKBO1ZJ4Iiod0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"googleCode\":\"4/FQGb6tDi7eKmoRV7DI2-v2tqRJu8YU1s146Og8bhZY05EsyaWjz--89rXg8mtTDf9LoKWCrn8PJ_MT1Lms2okGc\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/GoogleCalendar/calendar",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleCalendar",
+								"calendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleCalendar/event/calendar/:calendarId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTkwNDU0MzAsImV4cCI6MTU1OTEwNTQzMCwiaXNzIjoiSU9UZWNoIn0.gjvLFSHjPAYXBIqa_wKJhfB5NKFKdiUngMx0BQNU25I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/GoogleCalendar/event/calendar/:calendarId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleCalendar",
+								"event",
+								"calendar",
+								":calendarId"
+							],
+							"variable": [
+								{
+									"key": "calendarId",
+									"value": "devwork@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleCalendar/event/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTc4NDYyNzQsImV4cCI6MTU1NzkwNjI3NCwiaXNzIjoiSU9UZWNoIn0.OoLS0wHTZBVfQkKs2sB0WX6hZYaJxPWb35YRJY_rxiI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"calendarId\":\"devwork@iotech.pt\",\n\t\"event\":{\n    \t\"summary\": \"TesteBBB\",\n        \"location\": \"Avenida da Liberdade 1200, Medelo, Fafe\",\n        \"description\": \"TesteInsert\",\n        \"timeZone\": \"Europe/Lisbon\",\n        \"startTime\": \"2019-05-17T17:00:00\",\n        \"endTime\": \"2019-05-19T19:00:00\",\n        \"recurrence\": [],\n        \"attendees\": [\n        \t{\"email\": \"diogoferreira229@gmail.com\"}\n        ],\n        \"reminders\": {\n        \t\"useDefault\": false,\n        \t\"overrides\": [\n        \t\t{\"method\": \"popup\", \"minutes\": 10}\n        \t]\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/GoogleCalendar/event/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleCalendar",
+								"event",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleCalendar/event/:eventId/calendar/:calendarId/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTc4NDYyNzQsImV4cCI6MTU1NzkwNjI3NCwiaXNzIjoiSU9UZWNoIn0.OoLS0wHTZBVfQkKs2sB0WX6hZYaJxPWb35YRJY_rxiI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/GoogleCalendar/event/:eventId/calendar/:calendarId/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleCalendar",
+								"event",
+								":eventId",
+								"calendar",
+								":calendarId",
+								""
+							],
+							"variable": [
+								{
+									"key": "eventId",
+									"value": "k9jqmm997m4fh6e70ajc9a9cuk",
+									"type": "string"
+								},
+								{
+									"key": "calendarId",
+									"value": "devwork@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GoogleGroups",
+			"item": [
+				{
+					"name": "/GoogleGroups/group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNTA4NzcsImV4cCI6MTU1ODQxMDg3NywiaXNzIjoiSU9UZWNoIn0.Z-nr9NuB8p1BXbiHXHhY1BvxQjjd5nfdLHqBmEpZfe4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTMyOTgyNjUsImV4cCI6MTU1MzM1ODI2NSwiaXNzIjoiSU9UZWNoIn0.4zi_qyiKMqbRJHERxqmPtgKXr0-4IUv_TXGhaCAHyI0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"googleCode\":\"4/FgFTey7aLdrae8yHS3Uk8zLhGuZtW7qhRZazqrmBQ2SoDHqSYE5X5a9JPuYxgW238R6zh3iCn0OqoA2WtOt1VYg\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group/:groupKey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM0NDk2MzAsImV4cCI6MTU1MzUwOTYzMCwiaXNzIjoiSU9UZWNoIn0.LPHTZk1mJC4D3kQPgpGYJU9nasQHWnlSq81PTdl_45k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group/:groupId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group",
+								":groupId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "teste2@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group/:groupKey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgyOTIwMzIsImV4cCI6MTU1ODM1MjAzMiwiaXNzIjoiSU9UZWNoIn0.re8YE6D_P5j1mPgTlJ-ELdhHvOGnWFKrv8E1dNO52fE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group/:groupId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group",
+								":groupId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "teste3@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgyOTIwMzIsImV4cCI6MTU1ODM1MjAzMiwiaXNzIjoiSU9UZWNoIn0.re8YE6D_P5j1mPgTlJ-ELdhHvOGnWFKrv8E1dNO52fE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"group\": {\n\t\t\"email\": \"teste3@iotech.pt\",\n\t\t\"name\": \"netinGroup\",\n\t\t\"description\": \"Testing api requests!\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group/:groupKey/member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgxMTAxMjEsImV4cCI6MTU1ODE3MDEyMSwiaXNzIjoiSU9UZWNoIn0.mvccKFzN7t6F4k0xbyO2bNdhBru7O8p67ctj2fSMHSc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group/:groupId/member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group",
+								":groupId",
+								"member"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "testenetin01@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group/:groupKey/member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTkzMjExNjQsImV4cCI6MTU1OTM4MTE2NCwiaXNzIjoiSU9UZWNoIn0.U-8iHRGofjccS5o4Lwa3qgPxojfiAeCeuS3aNZVdpeE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"member\": {\n\t\t\"email\": \"devwork@iotech.pt\",\n\t\t\"role\": \"MEMBER\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group/:groupId/member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group",
+								":groupId",
+								"member"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "teste253@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group/:groupKey/member/:memberKey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM0NDk2MzAsImV4cCI6MTU1MzUwOTYzMCwiaXNzIjoiSU9UZWNoIn0.LPHTZk1mJC4D3kQPgpGYJU9nasQHWnlSq81PTdl_45k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"member\": {\n\t\t\"role\": \"MANAGER\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group/:groupId/member/:memberId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group",
+								":groupId",
+								"member",
+								":memberId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "testenetin01@iotech.pt",
+									"type": "string"
+								},
+								{
+									"key": "memberId",
+									"value": "teste2@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleGroups/group/:groupKey/member/:memberKey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM0NDk2MzAsImV4cCI6MTU1MzUwOTYzMCwiaXNzIjoiSU9UZWNoIn0.LPHTZk1mJC4D3kQPgpGYJU9nasQHWnlSq81PTdl_45k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/GoogleGroups/group/:groupId/member/:memberId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleGroups",
+								"group",
+								":groupId",
+								"member",
+								":memberId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "testenetin01@iotech.pt",
+									"type": "string"
+								},
+								{
+									"key": "memberId",
+									"value": "teste2@iotech.pt",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GoogleDrive",
+			"item": [
+				{
+					"name": "/GoogleDrive/directory/:root",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgzNjYzMzUsImV4cCI6MTU1ODQyNjMzNSwiaXNzIjoiSU9UZWNoIn0.CPWjJ0bXymElz9203dzBaZkpbSq45CUzvMnV7ga6fTM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/GoogleDrive/directory/:root",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleDrive",
+								"directory",
+								":root"
+							],
+							"variable": [
+								{
+									"key": "root",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleDrive/directory/:root",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM2ODk3NDIsImV4cCI6MTU1Mzc0OTc0MiwiaXNzIjoiSU9UZWNoIn0.d15eLreIcdWRviXFaX4hfhYPK45cPbNg6xxtTN8AR6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"googleCode\":\"4/GgFvXpsN8Vp2oYERw43CMSXGMCCc7UHYpLjHn9SeLfQyd8iFW-ew0s8Zk6cVhSO_oG7_80LgGBjdu7-6VPQnvuw\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/GoogleDrive/directory/:root",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleDrive",
+								"directory",
+								":root"
+							],
+							"variable": [
+								{
+									"key": "root",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GoogleDrive/file/:fileId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTczNTMxMDcsImV4cCI6MTU1NzQxMzEwNywiaXNzIjoiSU9UZWNoIn0.OUFo0s4mpYXDDETNOwTBCTlFmNTaVQQGpOFoVXFpOh8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/GoogleDrive/file/:fileId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"GoogleDrive",
+								"file",
+								":fileId"
+							],
+							"variable": [
+								{
+									"key": "fileId",
+									"value": "0ByElT-5CjeOyc3RhcnRlcl9maWxl",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Trello",
+			"item": [
+				{
+					"name": "/Trello/board",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ5Nzg0M2QxMTk5OTYxZDU5MDIwYjMzODg5MmNmNDNkMDJkODA1YjVkNjc2MGVjMDBkODY3OWIzZDQzODE0YTEwMjJkNjZiZTkwNGNiY2YzIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTkwNDg4NDgsImV4cCI6MTU1OTEwODg0OCwiaXNzIjoiSU9UZWNoIn0.DF5ME2C2dMhQqUvZVaUILqW0NbGksHd-S2pftR9JHWk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/board",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"board"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/board",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM2ODk3NDIsImV4cCI6MTU1Mzc0OTc0MiwiaXNzIjoiSU9UZWNoIn0.d15eLreIcdWRviXFaX4hfhYPK45cPbNg6xxtTN8AR6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\": \"dd8266ec82f38b9f8a557d2cb1ef16afea9ee7938f3fb35140d8d35be3c7d6cd\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Trello/board",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"board"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/board/:idBoard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM2ODk3NDIsImV4cCI6MTU1Mzc0OTc0MiwiaXNzIjoiSU9UZWNoIn0.d15eLreIcdWRviXFaX4hfhYPK45cPbNg6xxtTN8AR6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/board/:boardId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"board",
+								":boardId"
+							],
+							"variable": [
+								{
+									"key": "boardId",
+									"value": "5c61a70759844e36e9bdeae7",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/board/:idBoard/card",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM0NDk5NzQsImV4cCI6MTU1MzUwOTk3NCwiaXNzIjoiSU9UZWNoIn0.SmVuhxp_IREITF0G7DhsqiVcYwt8S6aeyZ2fTuEq0BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/board/:boardId/card",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"board",
+								":boardId",
+								"card"
+							],
+							"variable": [
+								{
+									"key": "boardId",
+									"value": "5c61a70759844e36e9bdeae7",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/board/:idBoard/list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/board/:boardId/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"board",
+								":boardId",
+								"list"
+							],
+							"variable": [
+								{
+									"key": "boardId",
+									"value": "5c61a70759844e36e9bdeae7",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/board/:idBoard/member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/board/:boardId/member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"board",
+								":boardId",
+								"member"
+							],
+							"variable": [
+								{
+									"key": "boardId",
+									"value": "5c61a70759844e36e9bdeae7",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/list/:idList/card",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/list/:listId/card",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"list",
+								":listId",
+								"card"
+							],
+							"variable": [
+								{
+									"key": "listId",
+									"value": "5c61a70759844e36e9bdeae9",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/card/:idCard/member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/card/:cardId/member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"card",
+								":cardId",
+								"member"
+							],
+							"variable": [
+								{
+									"key": "cardId",
+									"value": "5c864cb2fc40302397f8cc62",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/board",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test\",\n\t\"description\": \"Testing\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Trello/board",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"board"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"TestingAPI\",\n\t\"idBoard\": \"5cead6e55c7e5d8b78ddef0d\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Trello/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/card",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"corrections\",\n\t\"description\": \"Testing\",\n\t\"idList\": \"5cead839531b1902c791b8cb\",\n\t\"due\":\"2019-05-27T00:00:00\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Trello/card",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/card/member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTM2MTI4MTQsImV4cCI6MTU1MzY3MjgxNCwiaXNzIjoiSU9UZWNoIn0.NrIFZZKuMDZ_e0OkRs3nwHMcK19I7JUgt_IDbw9ZrLI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idMember\": \"\",\n\t\"idCard\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Trello/card/member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"card",
+								"member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/card/list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQzMjg4OTMsImV4cCI6MTU1NDM4ODg5MywiaXNzIjoiSU9UZWNoIn0.aMO2e60Zw-AScDbwaVY4yzsfPWjP09hpKKBS48bEIWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCard\": \"5c864cb2fc40302397f8cc62\",\n\t\"idList\": \"5ca613296fe8ba77b41b62b1\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Trello/card/list/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"card",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/card/:idCard/attachment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTU5Nzg4NTAsImV4cCI6MTU1NjAzODg1MCwiaXNzIjoiSU9UZWNoIn0.7erF5wV_ZBNNP_lpESUeC6uABWtTMh6bK5l8OPJqH4U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/Trello/card/:cardId/attachment",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"card",
+								":cardId",
+								"attachment"
+							],
+							"variable": [
+								{
+									"key": "cardId",
+									"value": "5c9b70eacdfb0725e143d360",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/card/:idCard/attachment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/card/:idCard/attachment",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"card",
+								":idCard",
+								"attachment"
+							],
+							"variable": [
+								{
+									"id": "01f95c0a-99c4-49aa-ad71-d5e6a4608d34",
+									"key": "idCard",
+									"value": "5c9b70eacdfb0725e143d360",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Trello/card/:idCard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTg4ODE3MzYsImV4cCI6MTU1ODk0MTczNiwiaXNzIjoiSU9UZWNoIn0.QRHeZ5xrwwVEuubVWyk_iBa49veUBdXjPgdddJ_WYZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Trello/card/:idCard",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Trello",
+								"card",
+								":idCard"
+							],
+							"variable": [
+								{
+									"id": "b1bbace3-cc64-4581-b878-e71d704536db",
+									"key": "idCard",
+									"value": "5c9b70eacdfb0725e143d360",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Bitrix",
+			"item": [
+				{
+					"name": "/Bitrix",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4Y2ZkM2IxZmI5M2JkMDllNTA5NmYzNjdjMTk5ZTg5YTBhZjYwNzcwMTI0ZTQzYjgyZGJkNTNmMTkzYmU3OGU3YzFmNDgwZGMxOTE3M2YzIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTkzMjE2MTQsImV4cCI6MTU1OTM4MTYxNCwiaXNzIjoiSU9UZWNoIn0.RQRPNJyDIc2j7PYht7oFwqcZWVC3RhUET2x0Ueow8VU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\": \"asdasdasda\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQzMDcwMjQsImV4cCI6MTU1NDM2NzAyNCwiaXNzIjoiSU9UZWNoIn0.FIs4pbaf6vsahyFq7IyirRsSTcM0ZCEL_MKqUF0o4rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQyNTMzNzMsImV4cCI6MTU1NDMxMzM3MywiaXNzIjoiSU9UZWNoIn0.cT8F5lXo84omyOgSdh-NsYSlU_EvGGxfvo3s_GEsDI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\" : \"task description\",\n\t\"title\" : \"task\",\n\t\"deadline\" : \"2019-05-13T17:06:06+04:00\",\n\t\"responsibleId\":\"\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/task",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTYyMDI3NjAsImV4cCI6MTU1NjI2Mjc2MCwiaXNzIjoiSU9UZWNoIn0.rjIwxhww0yKcJwlrJACI84mA73ZMwA98LqSga9pkT7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/task",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/task/:taskId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQyNTMzNzMsImV4cCI6MTU1NDMxMzM3MywiaXNzIjoiSU9UZWNoIn0.cT8F5lXo84omyOgSdh-NsYSlU_EvGGxfvo3s_GEsDI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/task/:taskId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"task",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/task/:taskId/execute",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQyNTMzNzMsImV4cCI6MTU1NDMxMzM3MywiaXNzIjoiSU9UZWNoIn0.cT8F5lXo84omyOgSdh-NsYSlU_EvGGxfvo3s_GEsDI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/task/:taskId/execute",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"task",
+								":taskId",
+								"execute"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/task/:taskId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"TITLE\":\"\",\n\t\"DESCRIPTION\":\"\",\n\t\"DEADLINE\": \"\",\n\t\"START_DATE_PLAN\":\"\",\t\n\t\"END_DATE_PLAN\" : \"\",\t\n\t\"PRIORITY\" : \"\",\t\n\t\"ACCOMPLICES\" : \"\",\t\n\t\"AUDITORS\" : \"\",\t\n\t\"TAGS\" : \"\",\t\n\t\"ALLOW_CHANGE_DEADLINE\" : \"\",\t \n\t\"TASK_CONTROL\" : \"\",\t\n\t\"GROUP_ID\" : \"\",\t\n\t\"RESPONSIBLE_ID\" : \"\",\t\n\t\"TIME_ESTIMATE\" : \"\",\t\n\t\"CREATED_BY\" : \"\",\t\n\t\"RESPONSIBLE_NAME\" : \"\",\t\t\n\t\"RESPONSIBLE_LAST_NAME\" : \"\",\t\n\t\"RESPONSIBLE_SECOND_NAME\" : \"\",\t\t\n\t\"CREATED_BY_NAME\" : \"\",\t\t\n\t\"CREATED_BY_LAST_NAME\" : \"\",\t\t\n\t\"CREATED_BY_SECOND_NAME\" : \"\",\t\t\n\t\"CREATED_DATE\" : \"\",\t\t\n\t\"CHANGED_BY\" : \"\",\t\t\n\t\"CHANGED_DATE\" : \"\",\t\t\n\t\"ALLOW_TIME_TRACKING\" : \"\"\t\n\t\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/task/:taskId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"task",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/task/:taskId/complete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQyNTMzNzMsImV4cCI6MTU1NDMxMzM3MywiaXNzIjoiSU9UZWNoIn0.cT8F5lXo84omyOgSdh-NsYSlU_EvGGxfvo3s_GEsDI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/task/:taskId/complete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"task",
+								":taskId",
+								"complete"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/task/:taskId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQyNTMzNzMsImV4cCI6MTU1NDMxMzM3MywiaXNzIjoiSU9UZWNoIn0.cT8F5lXo84omyOgSdh-NsYSlU_EvGGxfvo3s_GEsDI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/task/:taskId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"task",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTU1Mzk2MjUsImV4cCI6MTU1NTU5OTYyNSwiaXNzIjoiSU9UZWNoIn0.6yqgHDdEHAz-QsGuEYGMJh1WNURhe4kwd9h79T8g45M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"name\", \n    \"secondName\":\"second name\", \n    \"lastName\":\"last name\", \n    \"opened\":\"Y\",\n    \"typeId\":\"client\",\n    \"sourceId\":\"self\",\n    \"address\": \"aaaa\",\n    \"address2\": \"aaaa\",\n    \"addressCity\": \"nulaaaal\",\n    \"addressPostalCode\": \"nuaaaall\",\n    \"addressRegion\": \"nuaaaall\",\n    \"addressProvince\": \"nullaaaa\",\n    \"addressCountry\": \"nullaaa\",\n    \"addressCountryCode\": \"nullaaa\",\n    \"phone\":[\n    \t{\"VALUE\":\"123456789\", \"VALUE_TYPE\":\"work\"}\n    ],\n    \"email\":[\n    \t{\"VALUE\":\"aaabb@gmail.com\",\"VALUE_TYPE\":\"work\"}\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/contact",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTQzMDcwMjQsImV4cCI6MTU1NDM2NzAyNCwiaXNzIjoiSU9UZWNoIn0.FIs4pbaf6vsahyFq7IyirRsSTcM0ZCEL_MKqUF0o4rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/contact",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/contact/:contactId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTU1Mzk2MjUsImV4cCI6MTU1NTU5OTYyNSwiaXNzIjoiSU9UZWNoIn0.6yqgHDdEHAz-QsGuEYGMJh1WNURhe4kwd9h79T8g45M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/contact/:contactId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"contact",
+								":contactId"
+							],
+							"variable": [
+								{
+									"key": "contactId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/contact/:contactId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTMxMjEzODksImV4cCI6MTU1MzE4MTM4OSwiaXNzIjoiSU9UZWNoIn0.Dh5NGNtFRdwZUjsKvrELO1BIhTUGS9Mov-P2dkUhwKg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/contact/:contactId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"contact",
+								":contactId"
+							],
+							"variable": [
+								{
+									"key": "contactId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/contact/company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTMxMjEzODksImV4cCI6MTU1MzE4MTM4OSwiaXNzIjoiSU9UZWNoIn0.Dh5NGNtFRdwZUjsKvrELO1BIhTUGS9Mov-P2dkUhwKg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contactId\" : \"253\",\n\t\"companyId\" : \"1\",\n\t\"primary\" : \"Y\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/contact/company",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"contact",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/contact/:contactId/company/:companyId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTMxMjEzODksImV4cCI6MTU1MzE4MTM4OSwiaXNzIjoiSU9UZWNoIn0.Dh5NGNtFRdwZUjsKvrELO1BIhTUGS9Mov-P2dkUhwKg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/contact/:contactId/company/:companyId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"contact",
+								":contactId",
+								"company",
+								":companyId"
+							],
+							"variable": [
+								{
+									"key": "contactId",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "companyId",
+									"value": "1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTU1Mzk2MjUsImV4cCI6MTU1NTU5OTYyNSwiaXNzIjoiSU9UZWNoIn0.6yqgHDdEHAz-QsGuEYGMJh1WNURhe4kwd9h79T8g45M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Best Coffees LLC\",\n    \"companyType\": \"CUSTOMER\",\n    \"industry\": \"MANUFACTURING\",\n    \"employees\": \"EMPLOYEES_2\",\n    \"currencyId\": \"GBP\",\n    \"revenue\" : 3000000,\n    \"opened\": \"Y\",\n    \"address\": \"aaaa\",\n    \"address2\": \"aaaa\",\n    \"addressCity\": \"nulaaaal\",\n    \"addressPostalCode\": \"nuaaaall\",\n    \"addressRegion\": \"nuaaaall\",\n    \"addressProvince\": \"nullaaaa\",\n    \"addressCountry\": \"nullaaa\",\n    \"addressCountryCode\": \"nullaaa\",\n    \"phone\":[\n    \t{\"VALUE\":\"123456789\", \"VALUE_TYPE\":\"work\"}\n    ],\n    \"email\":[\n    \t{\"VALUE\":\"aaabb@gmail.com\",\"VALUE_TYPE\":\"work\"}\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/Bitrix/company",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTkzMDAwMDIsImV4cCI6MTU1OTM2MDAwMiwiaXNzIjoiSU9UZWNoIn0.4m_oA_iCZAjE_4XIpnMW3LOhOvLQ2L2cec4q2cyqnVI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/company",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/company/:companyId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTU1Mzk2MjUsImV4cCI6MTU1NTU5OTYyNSwiaXNzIjoiSU9UZWNoIn0.6yqgHDdEHAz-QsGuEYGMJh1WNURhe4kwd9h79T8g45M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/company/:companyId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"company",
+								":companyId"
+							],
+							"variable": [
+								{
+									"key": "companyId",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Bitrix/company/:companyId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTkzMDAwMDIsImV4cCI6MTU1OTM2MDAwMiwiaXNzIjoiSU9UZWNoIn0.4m_oA_iCZAjE_4XIpnMW3LOhOvLQ2L2cec4q2cyqnVI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Bitrix/company/:companyId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Bitrix",
+								"company",
+								":companyId"
+							],
+							"variable": [
+								{
+									"id": "9172a06f-1c1b-40f9-9c1e-a48e5cf629fa",
+									"key": "companyId",
+									"value": "9",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CpanelRepository",
+			"item": [
+				{
+					"name": "/CpanelRepository/directory/list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTc0ODIzMDIsImV4cCI6MTU1NzU0MjMwMiwiaXNzIjoiSU9UZWNoIn0.GEA5r3H2p_C9JapJLcIo4mIZh_YB6sBRVZNPG0RaDgU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"directory\":\"./IOTech/iotech_payment_terms_pt-PT.pdf\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/CpanelRepository/directory/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"CpanelRepository",
+								"directory",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/CpanelRepository/directory/get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTc1ODc1MDIsImV4cCI6MTU1NzY0NzUwMiwiaXNzIjoiSU9UZWNoIn0.sIz9fVjuTkhSLaoSuUjpJ00u0LeMpszcdLgrP_z9Qr0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"directory\":\"./IOTech/iotech_payment_terms_pt-PT.pdf\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/CpanelRepository/directory/get",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"CpanelRepository",
+								"directory",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PresenceType",
+			"item": [
+				{
+					"name": "/netin/presencetype",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Férias\",\n\t\"description\":\"Férias\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/presencetype",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"presencetype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/presencetype/:id/activate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/presencetype/:id/activate",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"presencetype",
+								":id",
+								"activate"
+							],
+							"variable": [
+								{
+									"id": "4b6c4b0d-bc01-418c-b24b-f7a855c9c29c",
+									"key": "id",
+									"value": "5cca05318e573a04b0c184ab",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/presencetype/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/presencetype/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"presencetype",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "8d0e78a1-1e88-43f3-8fbb-879a018f6013",
+									"key": "id",
+									"value": "5cca05318e573a04b0c184ab",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/presencetype",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/presencetype",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"presencetype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/presencetype/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/presencetype/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"presencetype",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "a80faa81-ae9e-49de-81d1-bde05eb570e6",
+									"key": "id",
+									"value": "5cca05318e573a04b0c184ab",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/presencetype/active",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/presencetype/active",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"presencetype",
+								"active"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "EmployeeSchedule",
+			"item": [
+				{
+					"name": "/netin/employeeschedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idUser\": \"5c8acacfc12d7b06c42596cb\",\n\t\"year\": 2019,\n\t\"month\": 4,\n\t\"days\":[\n\t\t{\"day\":1, \"presence_type\":\"5cbb2fce1af0a610172d8b10\"}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/employeeschedule/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgwNTQ1MzUsImV4cCI6MTU1ODExNDUzNSwiaXNzIjoiSU9UZWNoIn0._xiYKZDa5ocKH8-SOzYVRm0x5pKqLUnJsYTFvQH8bek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"days\":[\n\t\t{\"day\":2, \"presence_type\":\"5cbb2fce1af0a610172d8b10\"}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "a58080e3-99be-49d7-9050-29a01b011410",
+									"key": "id",
+									"value": "5cca05ba8e573a04b0c184ac",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/employeeschedule/:id/day/:idDay",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"days\":[\n\t\t{\"day\":10, \"presence_type\":\"5cbb2fce1af0a610172d8b10\"}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule/:id/day/:idDay",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule",
+								":id",
+								"day",
+								":idDay"
+							],
+							"variable": [
+								{
+									"id": "4f27568b-21a4-4af1-8213-5cea3513d9d6",
+									"key": "id",
+									"value": "5cca05ba8e573a04b0c184ac",
+									"type": "string"
+								},
+								{
+									"id": "883290cd-39bd-499b-bddf-75142f1291d5",
+									"key": "idDay",
+									"value": "5cca05de8e573a04b0c184ae",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/employeeschedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgwNTQ1MzUsImV4cCI6MTU1ODExNDUzNSwiaXNzIjoiSU9UZWNoIn0._xiYKZDa5ocKH8-SOzYVRm0x5pKqLUnJsYTFvQH8bek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/employeeschedule/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "dc572e58-0975-4bfa-9b74-019bbea26283",
+									"key": "id",
+									"value": "5cca05ba8e573a04b0c184ac",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/employeeschedule/user/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTY3NDEzODcsImV4cCI6MTU1NjgwMTM4NywiaXNzIjoiSU9UZWNoIn0.wnxwzY-UBFWL89d1oK1h1gk4NxOHUOVmCxC9AhhY3yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule/user/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "ab6f85d9-dfeb-4c00-82a3-bf9fbc192296",
+									"key": "id",
+									"value": "5c8acacfc12d7b06c42596cb",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/employeeschedule/user/:id/year/:year",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgwNTQ1MzUsImV4cCI6MTU1ODExNDUzNSwiaXNzIjoiSU9UZWNoIn0._xiYKZDa5ocKH8-SOzYVRm0x5pKqLUnJsYTFvQH8bek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule/user/:id/year/:year",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule",
+								"user",
+								":id",
+								"year",
+								":year"
+							],
+							"variable": [
+								{
+									"id": "ab6669a9-7805-4d44-a08f-8ccab012283f",
+									"key": "id",
+									"value": "5c8acacfc12d7b06c42596cb",
+									"type": "string"
+								},
+								{
+									"id": "2645ffc1-2b02-45e4-803c-f23412de3890",
+									"key": "year",
+									"value": "2019",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/employeeschedule/user/:id/year/:year/month/:month",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NTgwNTQ1MzUsImV4cCI6MTU1ODExNDUzNSwiaXNzIjoiSU9UZWNoIn0._xiYKZDa5ocKH8-SOzYVRm0x5pKqLUnJsYTFvQH8bek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/employeeschedule/user/:id/year/:year/month/:month",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"employeeschedule",
+								"user",
+								":id",
+								"year",
+								":year",
+								"month",
+								":month"
+							],
+							"variable": [
+								{
+									"id": "d6a75ead-4ede-4e4d-9a25-ac684b3c2221",
+									"key": "id",
+									"value": "5c8acacfc12d7b06c42596cb",
+									"type": "string"
+								},
+								{
+									"id": "1a61c70d-fedb-4a93-9ace-ddb64809af8a",
+									"key": "year",
+									"value": "2019",
+									"type": "string"
+								},
+								{
+									"id": "57b1b70c-47df-4fe7-acf8-4863c4cceb1a",
+									"key": "month",
+									"value": "4",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Terms",
+			"item": [
+				{
+					"name": "/netin/terms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NjMyOTMwOTAsImV4cCI6MTU2MzM1MzA5MCwiaXNzIjoiSU9UZWNoIn0.9Lh6XdbGhnMzG-noQCYR1lDQTL0C3DYRGQ9h0QLK60U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":22,\n\t\"description\":\"All members can/should use IOTECH signature on email.\",\n\t\"internal_rule\":true\n}"
+						},
+						"url": {
+							"raw": "{{host}}/netin/terms",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"terms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/netin/terms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmUwYjUyYjBlZjI1YmRlZGVjYmI3Yzk4ZTM0YWRjZGRlOTExZDU0MzJhMzk5NTAxYmJiYjI5M2ZmYjJlMTQxMTA5YjgwZGUxMTFkZWNkIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1NjMxOTUxODksImV4cCI6MTU2MzI1NTE4OSwiaXNzIjoiSU9UZWNoIn0.J4eiEh08ZVmlUXeV90m2j6gYzT4PuEYr5LIJ9skB-jo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/netin/terms",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"netin",
+								"terms"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GoogleSheets",
+			"item": [
+				{
+					"name": "/workavg",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTEzOTUwMjMsImV4cCI6MTU5MTQ1NTAyMywiaXNzIjoiSU9UZWNoIn0.9RDrGC1MnwpIJMsU96vM6Wim3uM4j9P3QLCv98Dp7YE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first\":{\n\t\t\"month\":1,\n\t\t\"year\":2020\n\t},\n\t\"second\":{\n\t\t\"month\":2,\n\t\t\"year\":2020\n\t},\n\t\"third\":{\n\t\t\"month\":3,\n\t\t\"year\":2020\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/googlesheets/workavg",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"googlesheets",
+								"workavg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employeeMonth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTEzOTUwMjMsImV4cCI6MTU5MTQ1NTAyMywiaXNzIjoiSU9UZWNoIn0.9RDrGC1MnwpIJMsU96vM6Wim3uM4j9P3QLCv98Dp7YE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Diogo Ferreira\",\n\t\"month\":2,\n\t\"year\":2020\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/googlesheets/employeeMonth",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"googlesheets",
+								"employeeMonth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/day",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTM3ODk0NjksImV4cCI6MTU5Mzg0OTQ2OSwiaXNzIjoiSU9UZWNoIn0.7GXu1adsf7fhL2C161bBO1sVcuoXgNQ1x4P5hxNYeP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"date\":\"2020-02-11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/googlesheets/day",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"googlesheets",
+								"day"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "FactorialHR",
+			"item": [
+				{
+					"name": "/createLeave",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTE0NTM3NjgsImV4cCI6MTU5MTUxMzc2OCwiaXNzIjoiSU9UZWNoIn0.7d-fmr9eqUUb41xMrhmwj-H2CQmSEf4IqIgoJYr5Sf0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"start\":\"2020-06-09\",\n\t\"end\":\"2020-06-10\",\n\t\"leave_type_id\":428614\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/factorial/createLeave",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"factorial",
+								"createLeave"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getLeaveTypes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTY3MDUxNTMsImV4cCI6MTU5Njc2NTE1MywiaXNzIjoiSU9UZWNoIn0.HK6htXBoF8xB15hmPTgzVD11PiA-tGWhPZS8U-AUVl8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/factorial/leave_types",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"factorial",
+								"leave_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/shift",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTU3OTgzNDIsImV4cCI6MTU5NTg1ODM0MiwiaXNzIjoiSU9UZWNoIn0.5rayEvOfJSZxwjRGBT3SYEMbcKOzOhcQmWMffpXkAEo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/factorial/shift",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"factorial",
+								"shift"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/updateToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTM2Nzg5NDIsImV4cCI6MTU5MzczODk0MiwiaXNzIjoiSU9UZWNoIn0.U7MEaljrM3wjFrSVea53045JrWAkC527ISAumG9qYxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\":\"ivPMARjH3X4FascVFjZcvTBlPzcF9S24nLFDbjCOLUo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/factorial/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"factorial",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/clockin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTU4ODYzMTIsImV4cCI6MTU5NTk0NjMxMiwiaXNzIjoiSU9UZWNoIn0.XBUMQXyRJyX3E9hwiHBBQklOCkHDbFWivyFXuVrmX1Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"date\":\"2020-07-01T10:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/factorial/clockin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"factorial",
+								"clockin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/clockout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTU4ODYzMTIsImV4cCI6MTU5NTk0NjMxMiwiaXNzIjoiSU9UZWNoIn0.XBUMQXyRJyX3E9hwiHBBQklOCkHDbFWivyFXuVrmX1Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"date\":\"2020-07-28T19:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/factorial/clockout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"factorial",
+								"clockout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{host}}/factorial/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/factorial/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"factorial",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Clickup",
+			"item": [
+				{
+					"name": "Synchronize",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTUyODg4MzcsImV4cCI6MTU5NTM0ODgzNywiaXNzIjoiSU9UZWNoIn0.Kgb3BmWyIMySTPrS6aBBUJWZ5ZZ5Y_KJN22MN2e1LA8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clickup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTQ4NTI4MTMsImV4cCI6MTU5NDkxMjgxMywiaXNzIjoiSU9UZWNoIn0.Z5iy0X0fVDL1HE9-fXXFYAP2H8EcLxIh3QpS5kWXY-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clickup/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTE1NTIwNjAsImV4cCI6MTU5MTYxMjA2MCwiaXNzIjoiSU9UZWNoIn0.XPw6WslaKEXeZGRqFLCq364tZGCtmF0Wszpk2IEZkng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\":\"B3MHBSPI2ZHZFV8TDBZ4QELK57FE9XIG\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/clickup/token",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTM2OTM2MDQsImV4cCI6MTU5Mzc1MzYwNCwiaXNzIjoiSU9UZWNoIn0.cPQG1MT1tFhOXwEbCT45qMNpolm2kEE6mPCjO59958w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clickup/team",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup",
+								"team"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Spaces",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTY3ODkwOTQsImV4cCI6MTU5Njg0OTA5NCwiaXNzIjoiSU9UZWNoIn0.Xe5D3OvdFuSmgs0i4SYOcFJInPit_K5WrbHylGdK3pQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clickup/team/:team_id/space/archived/:is_archived",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup",
+								"team",
+								":team_id",
+								"space",
+								"archived",
+								":is_archived"
+							],
+							"variable": [
+								{
+									"key": "team_id",
+									"value": "2400226",
+									"type": "string"
+								},
+								{
+									"key": "is_archived",
+									"value": "false",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Folders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTY3ODkwOTQsImV4cCI6MTU5Njg0OTA5NCwiaXNzIjoiSU9UZWNoIn0.Xe5D3OvdFuSmgs0i4SYOcFJInPit_K5WrbHylGdK3pQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clickup/space/:space_id/folder/archived/:is_archived",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup",
+								"space",
+								":space_id",
+								"folder",
+								"archived",
+								":is_archived"
+							],
+							"variable": [
+								{
+									"key": "space_id",
+									"value": "2400376",
+									"type": "string"
+								},
+								{
+									"key": "is_archived",
+									"value": "false",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lists",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTE1NTIwNjAsImV4cCI6MTU5MTYxMjA2MCwiaXNzIjoiSU9UZWNoIn0.XPw6WslaKEXeZGRqFLCq364tZGCtmF0Wszpk2IEZkng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clickup/folder/:folder_id/list/archived/:is_archived",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup",
+								"folder",
+								":folder_id",
+								"list",
+								"archived",
+								":is_archived"
+							],
+							"variable": [
+								{
+									"key": "folder_id",
+									"value": "8731194",
+									"type": "string"
+								},
+								{
+									"key": "is_archived",
+									"value": "false",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTM2OTM2MDQsImV4cCI6MTU5Mzc1MzYwNCwiaXNzIjoiSU9UZWNoIn0.cPQG1MT1tFhOXwEbCT45qMNpolm2kEE6mPCjO59958w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clickup/list/:list_id/task/archived/:is_archived",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clickup",
+								"list",
+								":list_id",
+								"task",
+								"archived",
+								":is_archived"
+							],
+							"variable": [
+								{
+									"key": "list_id",
+									"value": "13001334",
+									"type": "string"
+								},
+								{
+									"key": "is_archived",
+									"value": "false",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tink",
+			"item": [
+				{
+					"name": "Get Transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTY0MDIyMzIsImV4cCI6MTU5NjQ2MjIzMiwiaXNzIjoiSU9UZWNoIn0.4EX65kFuaRo0OdVTJL8wR4vvRMdsK5kW2Uid7oFbR8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tink/transactions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tink",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Token Code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTY0MDIyMzIsImV4cCI6MTU5NjQ2MjIzMiwiaXNzIjoiSU9UZWNoIn0.4EX65kFuaRo0OdVTJL8wR4vvRMdsK5kW2Uid7oFbR8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"dd7a68f9c4b84bb9a012c9e1d7b23974\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/tink",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tink"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CGD",
+			"item": [
+				{
+					"name": "Upload extract",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTc1MDY3ODQsImV4cCI6MTU5NzU2Njc4NCwiaXNzIjoiSU9UZWNoIn0.Aw7HvZFCSHYU5KjRIIMLtGNHJB3ktsKWZKNLCxCEmlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Pessoal/ioTech_netin_api/server/Modules/CGD/Extrato.csv"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cgd/transactions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cgd",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTY3MDUxNTMsImV4cCI6MTU5Njc2NTE1MywiaXNzIjoiSU9UZWNoIn0.HK6htXBoF8xB15hmPTgzVD11PiA-tGWhPZS8U-AUVl8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/diogoferreira/Downloads/Extrato.csv"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cgd/transactions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cgd",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "{{host}}/chatbotwebhook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"responseId\":\"26646784-830c-41b6-a3d3-1b5729609d88-dd2bbea9\",\n\t\"queryResult\":{\n\t\t\"queryText\":\"check my credit card balance\",\n\t\t\"action\":\"account.balance.check\",\n\t\t\"parameters\":{\n\t\t\t\"account\":\"credit card\"\n\t\t},\n\t\t\"allRequiredParamsPresent\":true,\n\t\t\"fulfillmentText\":\"Here's your latest balance:\",\n\t\t\"fulfillmentMessages\":[\n\t\t\t{\n\t\t\t\t\"text\":{\n\t\t\t\t\t\"text\":[\"Here's your latest balance:\"]\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"outputContexts\":[\n\t\t\t{\n\t\t\t\t\"name\":\"projects/banking-rwbnuj/agent/sessions/0c5d20b9-436d-d7b2-771b-acc3b955c856/contexts/balance\",\n\t\t\t\t\"lifespanCount\":5,\n\t\t\t\t\"parameters\":{\n\t\t\t\t\t\"account\":\"credit card\",\n\t\t\t\t\t\"account.original\":\"credit card\"\n\t\t\t\t}\n\t\t\t},{\n\t\t\t\t\"name\":\"projects/banking-rwbnuj/agent/sessions/0c5d20b9-436d-d7b2-771b-acc3b955c856/contexts/__system_counters__\",\n\t\t\t\t\"lifespanCount\":1,\n\t\t\t\t\"parameters\":{\n\t\t\t\t\t\"no-input\":0,\n\t\t\t\t\t\"no-match\":0,\n\t\t\t\t\t\"account\":\"credit card\",\n\t\t\t\t\t\"account.original\":\"credit card\"\n\t\t\t\t}\n\t\t\t},{\n\t\t\t\t\"name\":\"projects/banking-rwbnuj/agent/sessions/0c5d20b9-436d-d7b2-771b-acc3b955c856/contexts/weather\",\n\t\t\t\t\"parameters\":{\n\t\t\t\t\t\"city\":\"Rome\",\n\t\t\t\t\t\"account\":\"credit card\",\n\t\t\t\t\t\"account.original\":\"credit card\"\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"intent\":{\n\t\t\t\"name\":\"projects/banking-rwbnuj/agent/intents/e43a1f20-41d4-4e79-ad87-8d88221daedc\",\n\t\t\t\"displayName\":\"account.balance.check\"\n\t\t},\n\t\t\"intentDetectionConfidence\":1,\n\t\t\"languageCode\":\"en\"\n\t},\n\t\"originalDetectIntentRequest\":{\n\t\t\"payload\":{}\n\t},\n\t\"session\":\"projects/banking-rwbnuj/agent/sessions/0c5d20b9-436d-d7b2-771b-acc3b955c856\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/chatbotwebhook",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chatbotwebhook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/dialogflow",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkNjdmYWFmZjVkYjlkMTBjZTRjZWY3NDUzN2NmOWY0N2EyZjU0MjFkNjE0OTQ3MGRkODg3MjgwMjViMTJmYWY3N2YxMTU0YWMzNmU0MzgwIiwidHlwZSI6IlVzZXIiLCJpYXQiOjE1OTc1MDY3ODQsImV4cCI6MTU5NzU2Njc4NCwiaXNzIjoiSU9UZWNoIn0.Aw7HvZFCSHYU5KjRIIMLtGNHJB3ktsKWZKNLCxCEmlc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"session_id\":\"fb3ab16c-390f-4a20-b9ce-0e52ddaf0259\",\n\t\"message\":\"Quanto dinheiro tenho disponível?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/dialogflow/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"dialogflow",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
